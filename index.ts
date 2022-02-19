@@ -1,6 +1,10 @@
 // Import stylesheets
 import './style.css';
 
-// Write TypeScript code!
+import { Person } from './Person';
+
+let gabriel = new Person('Gabriel', 'Mármore', 'Pirajá', 19);
+
 const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+appDiv.innerHTML = `<h1>` + gabriel.getFullName() + `</h1>`;
+appDiv.innerHTML += `<p>` + gabriel.getBirthdayYear() + `</p>`;
